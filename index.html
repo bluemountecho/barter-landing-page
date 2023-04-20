@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tailwind CSS Skeleton</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+
+    <!-- Font Awesome if you need it
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+    -->
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+    <!--Replace with your tailwind.css once created-->
+    <link
+      href="https://unpkg.com/@tailwindcss/custom-forms/dist/custom-forms.min.css"
+      rel="stylesheet"
+    />
+    <!--Tailwind Custom Forms - use to standardise form fields - https://github.com/tailwindcss/custom-forms-->
+
+    <style>
+      @import url("https://rsms.me/inter/inter.css");
+
+      @media (min-width: 1200px){
+        .container {
+            max-width: 1200px;
+        }
+      }
+
+      html {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+          "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+          "Noto Color Emoji";
+      }
+
+      body{
+        background-image: url('./assets/hero_bg.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      button,
+      .gradient2 {
+        background-color: #f39f86;
+        background-image: linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
+      }
+
+      /* Browser mockup code
+ * Contribute: https://gist.github.com/jarthod/8719db9fef8deb937f4f
+ * Live example: https://updown.io
+ */
+
+      .browser-mockup {
+        border-top: 2em solid rgba(230, 230, 230, 0.7);
+        position: relative;
+        height: 60vh;
+        background-image: url("assets/widget_protocol.png");
+      }
+
+      .browser-mockup:before {
+        display: block;
+        position: absolute;
+        content: "";
+        top: -1.25em;
+        left: 1em;
+        width: 0.5em;
+        height: 0.5em;
+        border-radius: 50%;
+        background-color: #f44;
+        box-shadow: 0 0 0 2px #f44, 1.5em 0 0 2px #9b3, 3em 0 0 2px #fb5;
+      }
+
+      .browser-mockup > * {
+        display: block;
+      }
+
+      /* Custom code for the demo */
+    </style>
+  </head>
+
+  <body class="leading-relaxed tracking-wide flex flex-col">
+    <!--Nav-->
+    <nav id="header" class="w-full z-30 top-0 py-1 lg:py-6">
+      <div
+        class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-2 lg:py-6"
+      >
+        <div class="">
+          <a
+            class="flex items-center no-underline hover:no-underline font-bold text-xl"
+            href="#"
+          >
+            <img src="./assets/logo_nav.png" class="mr-3">
+            BUS PROTOCOL
+          </a>
+        </div>
+
+        <div
+          class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 text-black p-4 lg:p-0 z-20"
+          id="nav-content"
+        >
+          <ul class="list-reset lg:flex justify-end flex-1 items-center">
+            <li class="mr-3">
+              <a
+                class="inline-block py-2 px-4 text-black text-base no-underline"
+                href="#"
+                >Community</a
+              >
+            </li>
+          </ul>
+          <button
+            id="navAction"
+            class="text-white px-4 py-3.5"
+            style="background: #141414;border-radius: 50px;">
+            Open Protocol
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0">
+      <div class="px-3 pt-10">
+        <span
+          class="my-4 flex items-center font-black leading-tight"
+          style="
+          font-style: normal;
+          font-weight: 700;
+          font-size: 128px;
+          line-height: 109px;
+          color: #0B2B20;
+          "
+        >
+          BUS<img src="./assets/btc_bus.png" class="ml-5"/>
+          <span class="text-xl ml-5">The revolutionary USD<br>Destablecoin backed by HBIT</span>
+        </span>
+        <span
+          class="my-4 flex items-center font-black leading-tight"
+          style="
+          font-style: normal;
+          font-weight: 700;
+          font-size: 128px;
+          line-height: 109px;
+          color: #0B2B20;
+          "
+        >
+          PROTOCOL
+        </span>
+      </div>
+
+      <div class="flex items-stretch w-full mx-auto content-end mt-10">
+        <div class="w-full lg:w-3/5 mr-10">
+          <img src="./assets/widget_protocol.png">
+        </div>
+        <div class="w-full lg:w-2/5 relative">
+          <img src="./assets/widget_bg1.png" class="h-full">
+          <div class="flex justify-center items-center h-full text-black text-xl absolute top-0 right-0 p-8">
+            <div class="">
+              <div class="mb-5">
+                <div style="width: 40px; height: 40px; background-color: white;" class="mb-3"></div>
+                Provide HBIT collateral to borrow the BUS stablecoin.
+              </div>
+              <div class="mb-5">
+                <div style="width: 40px; height: 40px; background-color: white;" class="mb-3"></div>
+                Stake and earn DDO token and GOVU token.
+              </div>
+              <div>
+                <div style="width: 40px; height: 40px; background-color: white;" class="mb-3"></div>
+                Trade your favorite altcoin without trading your HBIT forever.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="bg-white pt-12 ">
+      <div
+        class="container mx-auto flex flex-wrap items-center justify-between pb-12"
+      >
+        <div class="w-full relative">
+          <img src="./assets/widget_security.png">
+          <div class="absolute top-0 left-0 bottom-0 p-10 flex" >
+            <img src="./assets/ush_dollar.png" class="h-full">  
+            <div class="flex items-center justify-center pl-20">
+              <div class="text-white pl-5 pr-5">
+                <div class="text-3xl font-semibold">
+                  Maximum Security With<br>
+                  Over-Collateralized Borrowing
+                </div>
+                <div class="text-base mt-5" style="color: rgba(255, 255, 255, 0.7)">
+                  BUS is an easy-to-use destablecoin on the Hashbit Smart Chain.<br>
+                  All BUS in circulation is directly backed by excess collateral,<br>
+                  meaning that the value of the collateral is higher than the value of the BUS debt.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="container mx-auto flex items-stretch justify-between pb-12"
+      >
+        <div class="w-full lg:w-2/5 relative mr-10" style="background-color: #F5F5F5; border-radius: 40px;">
+          <div class="flex justify-center items-center h-full text-black text-xl absolute top-0 right-0 left-0 bottom-0">
+            <div class="w-full">
+              <span class="text-3xl text-black font-medium ml-8">
+                Keep up with us: 
+              </span>
+              <div class="my-3 text-2xl py-5 px-20 flex items-center" style="border: 1px solid #D9D9D9; border-radius: 100px;">
+                <img src="./assets/Twitter.png" class="mr-3">
+                Twitter
+              </div>
+              <div class="my-3 text-2xl py-5 px-20 flex items-center" style="border: 1px solid #D9D9D9; border-radius: 100px;">
+                <img src="./assets/CoinMarketCap.png" class="mr-3">
+                CoinMarketCap
+              </div>
+              <div class="my-3 text-2xl py-5 px-20 flex items-center" style="border: 1px solid #D9D9D9; border-radius: 100px;">
+                <img src="./assets/CoinGecko.png" class="mr-3">
+                CoinGecko
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full lg:w-3/5 relative">
+          <img src="./assets/widget_bg2.png">
+          <div class="absolute top-0 left-0 right-0 bottom-0 p-10">
+            <div class="flex justify-center items-center h-full">
+              <div class="text-white text-center">
+                <div class="text-3xl font-medium">
+                  Sustainable Yield Savings
+                </div>
+                <div class="text-xl pt-3">
+                  Yield protected by HBIT over-collateralization
+                </div>
+                <button
+                  class="px-6 py-4 text-xl mt-7"
+                  style="background: #141414;border-radius: 50px;">
+                  Start Earning
+                </button>
+              </div>
+            </div>            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Footer-->
+    <footer class="p-20" style="background: #000800; border-top-left-radius: 60px; border-top-right-radius: 60px;">
+      <div class="container mx-auto px-10 text-center text-white">
+        <div class="text-2xl font-semibold">
+          F.A.Qs
+        </div>
+        <div class="w-full flex flex-col md:flex-row py-6 justify-between items-center text-left faq">
+          <div class="questions w-full">
+            <div class="w-full">
+              <h3 class="question text-xl text-white flex items-center justify-between my-3">
+                How many team members can I invite?
+                <!-- <img src="./assets/twitter-gray.png" alt="" /> -->
+                <span class="text-3xl">+</span>
+              </h3>
+              <p class="answer text-white text-base py-5">
+                You can invite up to 2 additional users on the Free plan. There is no limit on
+                team members for the Premium plan.
+              </p>
+            </div>
+            <hr />
+            <div class="w-full">
+              <h3 class="question text-xl text-white flex items-center justify-between my-3">
+                How many team members can I invite?
+                <!-- <img src="./assets/twitter-gray.png" alt="" /> -->
+                <span class="text-3xl">+</span>
+              </h3>
+              <p class="answer text-white text-base py-5">
+                You can invite up to 2 additional users on the Free plan. There is no limit on
+                team members for the Premium plan.
+              </p>
+            </div>
+            <hr />
+            <div class="w-full">
+              <h3 class="question text-xl text-white flex items-center justify-between my-3">
+                How many team members can I invite?
+                <!-- <img src="./assets/twitter-gray.png" alt="" /> -->
+                <span class="text-3xl">+</span>
+              </h3>
+              <p class="answer text-white text-base py-5">
+                You can invite up to 2 additional users on the Free plan. There is no limit on
+                team members for the Premium plan.
+              </p>
+            </div>
+            <hr />
+            <div class="w-full">
+              <h3 class="question text-xl text-white flex items-center justify-between my-3">
+                How many team members can I invite?
+                <!-- <img src="./assets/twitter-gray.png" alt="" /> -->
+                <span class="text-3xl">+</span>
+              </h3>
+              <p class="answer text-white text-base py-5">
+                You can invite up to 2 additional users on the Free plan. There is no limit on
+                team members for the Premium plan.
+              </p>
+            </div>
+            <hr />
+            <div class="w-full">
+              <h3 class="question text-xl text-white flex items-center justify-between my-3">
+                How many team members can I invite?
+                <!-- <img src="./assets/twitter-gray.png" alt="" /> -->
+                <span class="text-3xl">+</span>
+              </h3>
+              <p class="answer text-white text-base py-5">
+                You can invite up to 2 additional users on the Free plan. There is no limit on
+                team members for the Premium plan.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="w-full flex flex-col md:flex-row py-6 justify-between items-center">
+          <div class="text-base" style="color:rgba(255,255,255, 0.5)">
+            © 2023 BUS protocol. All rights reserved | barter@BUS.money
+          </div>
+          <div class="flex items-center">
+            <img src="./assets/twitter-gray.png" class="mr-5">
+            <img src="./assets/telegram.png">
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      /*Toggle dropdown list*/
+      /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
+
+      var navMenuDiv = document.getElementById("nav-content");
+      var navMenu = document.getElementById("nav-toggle");
+
+      document.onclick = check;
+      function check(e) {
+        var target = (e && e.target) || (event && event.srcElement);
+
+        //Nav Menu
+        if (!checkParent(target, navMenuDiv)) {
+          // click NOT on the menu
+          if (checkParent(target, navMenu)) {
+            // click on the link
+            if (navMenuDiv.classList.contains("hidden")) {
+              navMenuDiv.classList.remove("hidden");
+            } else {
+              navMenuDiv.classList.add("hidden");
+            }
+          } else {
+            // click both outside link and outside menu, hide menu
+            navMenuDiv.classList.add("hidden");
+          }
+        }
+      }
+      function checkParent(t, elm) {
+        while (t.parentNode) {
+          if (t == elm) {
+            return true;
+          }
+          t = t.parentNode;
+        }
+        return false;
+      }
+
+      const answers = document.querySelectorAll('.answer');
+      const arrowIcons = document.querySelectorAll('.question span');
+      const container = document.querySelector('.faq');
+
+      answers.forEach(answer => (answer.style.display = 'none'));
+
+      container.addEventListener('click', e => {
+        arrowIcons.forEach(arrow => {
+          if (e.target === arrow) {
+            answers.forEach(answer => {
+              if (answer.parentElement === e.target.parentElement.parentElement) {
+                if (answer.style.display === 'none') {
+                  arrow.innerHTML = "-";
+                  answer.style.display = 'block';
+                } else if (answer.style.display === 'block') {
+                  arrow.innerHTML = "+";
+                  answer.style.display = 'none';
+                }
+              }
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
